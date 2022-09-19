@@ -1,0 +1,142 @@
+:root {
+	/* Primary */
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+
+	/* Neutral */
+	--very-dark-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--cream);
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	max-width: 375px;
+}
+
+.product__image-mobile {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.product__image-desktop {
+	display: none;
+}
+
+.product-info {
+	background-color: var(--white);
+	padding: 25px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+}
+
+.product-info__type {
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: var(--dark-grayish-blue);
+	font-size: 13px;
+}
+
+.product-info__header {
+	font-family: 'Fraunces', sans-serif;
+	font-weight: 700;
+	padding: 15px 0;
+	line-height: 32px;
+	font-size: 32px;
+}
+
+.product-info__description {
+	color: var(--dark-grayish-blue);
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.product-info__prices {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.prices__current-price {
+	font-family: 'Fraunces', sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--dark-cyan);
+}
+
+.prices__earlier-price {
+	color: var(--dark-grayish-blue);
+	text-decoration: line-through;
+}
+
+.product-info__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	cursor: pointer;
+	border: none;
+	background-color: var(--dark-cyan);
+	color: var(--white);
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	padding: 15px 0;
+	border-radius: 8px;
+	transition: background-color 0.2s;
+}
+
+.product-info__button:hover {
+	background-color: var(--very-dark-blue);
+}
+
+.button__icon {
+	margin-right: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+	.product {
+		flex-direction: row;
+		max-width: 600px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.product__image-mobile {
+		display: none;
+	}
+
+	.product__image-desktop {
+		display: block;
+		width: 300px;
+		border-bottom-left-radius: 15px;
+		border-top-left-radius: 15px;
+	}
+
+	.product-info {
+		width: 300px;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
