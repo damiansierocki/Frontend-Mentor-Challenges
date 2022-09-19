@@ -27,6 +27,7 @@ body {
 	align-items: center;
 }
 
+/* Home Card */
 .card {
 	background-color: var(--dark-blue);
 	max-width: 400px;
@@ -133,4 +134,41 @@ body {
 		width: 50px;
 		height: 50px;
 	}
+}
+
+/* Thank you card */
+.thank-you {
+	background-color: var(--dark-blue);
+	max-width: 400px;
+	min-height: 350px;
+	margin: 0 25px;
+	padding: 25px;
+	border-radius: 15px;
+	text-align: center;
+	display: none;
+}
+
+.thank-you__image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.thank-you__score {
+	background-color: hsl(213, 19%, 23%);
+	color: var(--orange);
+	width: 200px;
+	margin: 30px auto;
+	padding: 10px 0;
+	border-radius: 35px;
+}
+
+.thank-you__title {
+	padding-bottom: 20px;
+	font-size: 1.7em;
+}
+
+.thank-you__description {
+	color: var(--light-grey);
+	font-size: 1.1em;
 }
