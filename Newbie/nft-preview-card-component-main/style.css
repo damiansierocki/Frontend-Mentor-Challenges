@@ -1,0 +1,153 @@
+:root {
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--very-dark-blue: hsl(217, 54%, 11%);
+	--very-dark-blue-2: hsl(216, 50%, 16%);
+	--very-dark-blue-3: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/* 300, 400, 600 */
+	font-family: 'Outfit', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	background-color: var(--very-dark-blue);
+	color: var(--soft-blue);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background-color: var(--very-dark-blue-2);
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 25px;
+	padding: 25px;
+	border-radius: 20px;
+}
+
+.card__image-container {
+	position: relative;
+}
+
+.card__image {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.card__image-container_2 {
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	border-radius: 10px;
+	transition: opacity 0.15s;
+	opacity: 0;
+}
+
+.card__image-container_2:hover {
+	background-color: var(--cyan);
+	opacity: 0.6;
+}
+
+.card__image_2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content__title {
+	color: var(--white);
+	font-size: 1.3em;
+	padding: 20px 0;
+	cursor: pointer;
+	transition: color 0.15s;
+}
+
+.content__title:hover {
+	color: var(--cyan);
+}
+
+.content__description {
+	padding-bottom: 20px;
+	font-size: 0.9em;
+	line-height: 1.6em;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info__left,
+.info__right {
+	display: flex;
+	align-items: center;
+	font-size: 0.9em;
+}
+
+.left__image {
+	width: 10px;
+	height: 20px;
+}
+
+.left__text {
+	margin-left: 10px;
+	color: var(--cyan);
+	font-weight: 600;
+}
+
+.right__image {
+	width: 20px;
+	margin-right: 10px;
+}
+
+hr {
+	margin: 25px 0;
+	background-color: var(--very-dark-blue-3);
+	height: 1px;
+	border: none;
+}
+
+.by-who {
+	display: flex;
+	align-items: center;
+}
+
+.by-who__image {
+	width: 35px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+
+.by-who__text {
+	margin-left: 15px;
+	font-size: 0.9em;
+}
+
+.by-who__person {
+	color: var(--white);
+	cursor: pointer;
+	transition: color 0.15s;
+}
+
+.by-who__person:hover {
+	color: var(--cyan);
+}
