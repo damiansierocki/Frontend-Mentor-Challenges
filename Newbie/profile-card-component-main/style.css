@@ -1,0 +1,105 @@
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+	background-position: -700px -700px, 150px 200px;
+	background-repeat: no-repeat, no-repeat;
+	background-color: var(--dark-cyan);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.card__content {
+	position: relative;
+	padding: 70px 0 25px 0;
+}
+
+.card__picture-image {
+	position: absolute;
+	top: -19%;
+	left: 34%;
+	border-radius: 50%;
+	border: 5px solid white;
+}
+
+.card__name-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card__name {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.card__age {
+	color: var(--dark-grayish-blue);
+	font-size: 18px;
+}
+
+.card__city {
+	text-align: center;
+	padding: 10px 0 25px 0;
+	font-size: 15px;
+	color: var(--dark-grayish-blue);
+}
+
+.card__line {
+	height: 1px;
+	border: 0;
+	background-color: var(--dark-gray);
+}
+
+.card__info-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+	padding-top: 25px;
+}
+
+.card__header {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.card__text {
+	padding-top: 5px;
+	letter-spacing: 1.5px;
+	font-size: 11px;
+	color: var(--dark-grayish-blue);
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		background-position: -300px -500px, 750px 300px;
+	}
+}
